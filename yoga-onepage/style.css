@@ -1,7 +1,7 @@
 /*-----------------------------------------------------------------------------------
-	Template Blocs Seu Site Online
-	About: Seu Site Online
-	Author: Seu Site online
+	yoga-onepage h
+	About: A shiny new Blocs website.
+	Author: HD Digital
 	Version: 1.0
 	Built with Blocs
 -----------------------------------------------------------------------------------*/
@@ -54,6 +54,139 @@ a:hover{text-decoration: none; cursor:pointer;}
 	padding:20px;
 }
 
+/* = Full Width Blocs 
+-------------------------------------------------------------- */
+
+.full-width-bloc{
+	padding-left:0;
+	padding-right:0;
+}
+.full-width-bloc .row{
+	margin-left:0;
+	margin-right:0;
+}
+.full-width-bloc .container{
+	width:100%;
+	max-width:100%!important;
+}
+.full-width-bloc .carousel img{
+	width:100%;
+	height:auto;
+}
+
+
+/* Edge Dividers */
+
+.bloc-shape-divider{
+	position: absolute;
+	width:100%;
+	text-align:center;
+	left:0;
+	right:0;
+	z-index: 0;
+	display: flex;
+	pointer-events: none;
+}
+.svg-divider{
+	width:100%;
+	height:100px;
+	fill:#000000;
+}
+.bloc-divider-top{
+	top:-1px;
+	align-items: flex-start;
+}
+.bloc-divider-bottom{
+	bottom:-1px;
+	align-items: flex-end;
+}
+.bloc-divider-flip-x svg{
+	transform:scale(-1,1);
+}
+.bloc-divider-flip-y svg{
+	transform:scale(1,-1);
+}
+.bloc-divider-flip-x.bloc-divider-flip-y svg{
+	transform:scale(-1,-1);
+}
+
+
+/* Background Effects */
+
+.parallax__container {
+	clip: rect(0, auto, auto, 0);
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index:-1;
+}
+.parallax {
+	position: fixed;
+	top: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+/* Dark theme */
+
+.d-bloc{
+	color:rgba(255,255,255,.7);
+}
+.d-bloc button:hover{
+	color:rgba(255,255,255,.9);
+}
+.d-bloc .icon-round,.d-bloc .icon-square,.d-bloc .icon-rounded,.d-bloc .icon-semi-rounded-a,.d-bloc .icon-semi-rounded-b{
+	border-color:rgba(255,255,255,.9);
+}
+.d-bloc .divider-h span{
+	border-color:rgba(255,255,255,.2);
+}
+.d-bloc .a-btn,.d-bloc .navbar a, .d-bloc a .icon-sm, .d-bloc a .icon-md, .d-bloc a .icon-lg, .d-bloc a .icon-xl, .d-bloc h1 a, .d-bloc h2 a, .d-bloc h3 a, .d-bloc h4 a, .d-bloc h5 a, .d-bloc h6 a, .d-bloc p a{
+	color:rgba(255,255,255,.6);
+}
+.d-bloc .a-btn:hover,.d-bloc .navbar a:hover,.d-bloc a:hover .icon-sm, .d-bloc a:hover .icon-md, .d-bloc a:hover .icon-lg, .d-bloc a:hover .icon-xl, .d-bloc h1 a:hover, .d-bloc h2 a:hover, .d-bloc h3 a:hover, .d-bloc h4 a:hover, .d-bloc h5 a:hover, .d-bloc h6 a:hover, .d-bloc p a:hover{
+	color:rgba(255,255,255,1);
+}
+.d-bloc .navbar-toggle .icon-bar{
+	background:rgba(255,255,255,1);
+}
+.d-bloc .btn-wire,.d-bloc .btn-wire:hover{
+	color:rgba(255,255,255,1);
+	border-color:rgba(255,255,255,1);
+}
+.d-bloc .card{
+	color:rgba(0,0,0,.5);
+}
+.d-bloc .card button:hover{
+	color:rgba(0,0,0,.7);
+}
+.d-bloc .card icon{
+	border-color:rgba(0,0,0,.7);
+}
+.d-bloc .card .divider-h span{
+	border-color:rgba(0,0,0,.1);
+}
+.d-bloc .card .a-btn{
+	color:rgba(0,0,0,.6);
+}
+.d-bloc .card .a-btn:hover{
+	color:rgba(0,0,0,1);
+}
+.d-bloc .card .btn-wire, .d-bloc .card .btn-wire:hover{
+	color:rgba(0,0,0,.7);
+	border-color:rgba(0,0,0,.3);
+}
+
 
 /* Light theme */
 
@@ -87,8 +220,15 @@ a:hover{text-decoration: none; cursor:pointer;}
 /* = NavBar
 -------------------------------------------------------------- */
 
-.navbar-dark .nav .dropdown-menu .nav-link{
-	color: rgb(64, 64, 64);
+/* = Sticky Nav
+-------------------------------------------------------------- */
+
+.sticky-nav.sticky{
+	position:fixed;
+	top:0;
+	z-index:1000;
+	box-shadow:0 1px 2px rgba(0,0,0,.3);
+	 transition: all .2s ease-out;
 }
 
 /* Nav Special Classes */
@@ -283,9 +423,28 @@ a:hover{text-decoration: none; cursor:pointer;}
 /* = Bric adjustment margins
 -------------------------------------------------------------- */
 
+.mg-clear{
+	margin:0;
+}
+.mg-sm{
+	margin-top:10px;
+	margin-bottom:5px;
+}
 .mg-md{
 	margin-top:10px;
 	margin-bottom:20px;
+}
+img.mg-sm,img.mg-md,img.mg-lg{
+	margin-top: 0;
+}
+img.mg-sm{
+	margin-bottom:10px;
+}
+img.mg-md{
+	margin-bottom:30px;
+}
+img.mg-lg{
+	margin-bottom:50px;
 }
 
 /* = Buttons
@@ -314,8 +473,8 @@ button{
 
 /* = Icons
 -------------------------------------------------------------- */
-.icon-xl{
-	font-size:100px!important;
+.icon-md{
+	font-size:30px!important;
 }
 
 
@@ -334,34 +493,37 @@ button{
 	border-radius:0 0 29px 29px;
 }
 
-
-
-
-
-/* ScrollToTop button */
-
-.scrollToTop{
-	width:36px;
-	height:36px;
-	padding:5px;
-	position:fixed;
-	bottom:20px;
-	right:20px;
-	opacity:0;
-	z-index:999;
-	transition: all .3s ease-in-out;
-	pointer-events:none;
+/* = Dividers
+-------------------------------------------------------------- */
+.divider-h{
+	padding:20px 0;
+	width:100%;
+	display:inline-block;
 }
-.showScrollTop{
-	opacity: 1;
-	pointer-events:all;
+.divider-h span{
+	display: block;
+	border-top:1px solid transparent;
 }
-.scroll-to-top-btn-icon{
-	fill: none;
-	stroke: #fff;
-	stroke-width: 2px;
-	fill-rule: evenodd;
-	stroke-linecap:round;
+.divider-half{
+	width: 50%;
+	margin: 0 auto;
+}
+.dropdown-menu .divider-h,.dropdown-menu .divider-half{
+	padding:0;
+}
+
+/* = Forms
+-------------------------------------------------------------- */
+
+.form-control{
+	border-color:rgba(0,0,0,.1);
+	box-shadow:none;
+}
+
+
+/* Hide Object */
+.object-hidden{
+	display:none;
 }
 
 /* = Custom Styling
@@ -373,69 +535,278 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .container{
 	max-width:1140px;
 }
-.btn-style{
-	width:28.71%;
-	background:linear-gradient(124deg, #0B95D1 0%, #FF4CCA 100%);
-	border-radius:12px 12px 12px 12px;
+.h3-style{
+	font-size:20px;
+	font-family:"Montserrat";
 }
-.h2-style{
-	width:100%;
+.coluna-02{
+	border-style:solid;
+	border-color:rgba(126,128,128,0.63)!important;
+	opacity:1.0;
+	cursor:move;
+	margin-top:-20px;
+	border-width:20px 0px 0px 0px;
+}
+.fundo-front{
+	height:600px;
+}
+.imagem-2-colunas{
+	border-style:solid;
+	border-right-width:10px;
+}
+.title-aula{
+	font-size:18px;
 	font-weight:bold;
-	color:rgba(0,0,0,0.94)!important;
+}
+.horarios{
+	background-color:#6B8695;
+	border-style:solid;
+	border-color:#EF3ACF!important;
+	margin-top:20px;
+	background:linear-gradient(0deg, #58626A 0%, #6F6F6F 100%);
+	box-shadow:0px 5px 13px #000000;
+	padding:25px 25px 25px 25px;
+	border-width:0px 0px 7px 0px;
+}
+.bloc-divider-t-fill{
+	fill:#FFFFFF;
+}
+.col{
+	border-style:_NS:2416;
+}
+.professor{
+	border-style:solid;
+	border-color:#0095CE!important;
+	background-color:rgba(255,255,255,0.95);
+	padding:25px 25px 25px 25px;
+	border-width:0px 0px 5px 0px;
+}
+.nome-professor{
+	padding-right:10px;
+	padding-bottom:0px;
+	padding-left:10px;
+}
+.imagem-professor{
+	border-radius:180px 180px 180px 180px;
+}
+.row-style{
+	width:39.12%;
+}
+.menu-top{
+	height:45px;
+	background-color:#FFFFFF;
+}
+.fundo-contato{
+	background-color:rgba(115,115,115,0.72);
+	padding:30px 30px 30px 30px;
+}
+.botao-enviar{
+	background-color:#BF77E9;
+	border-radius:0px 0px 0px 0px;
+}
+.footer-pe-ioga{
+	background-position:center center;
+}
+.menu{
+	margin-top:-20px;
 }
 .p-style{
-	width:100%;
+	font-size:15px;
+}
+.p-bloc-2-style{
+	font-size:15px;
+}
+.harmonia{
+	padding:25px 25px 25px 25px;
+}
+.title-coluna{
+	font-family:"Montserrat";
+	font-size:38px;
 	color:#000000!important;
+}
+.titulo-harmonia{
+	font-family:Montserrat;
+	font-size:18px;
+	font-weight:bold;
+}
+.p-bloc-3-style{
+	font-size:13px;
+}
+.container-div-style{
+	width:85.28%;
+	margin-top:20px;
+}
+.cor{
+	background-color:#3B3C3D;
 	font-weight:lighter;
-	font-size:20px;
 }
-.h1-style{
-	width:100%;
-	color:#CF00B6!important;
+.title-nome-prof{
+	font-family:Montserrat;
+	background-size:length;
+	font-weight:bold;
+	font-size:17px;
+}
+.bloc-divider-b-fill{
+	fill:#FFFFFF;
+}
+.fundo-image-meio{
+	background:linear-gradient(90deg, #BF77E9 0%, #000000 67%, #79A9EC 100%);
+}
+.icone-freont{
+	height:578px;
+}
+.cor-title{
+	color:#FFFFFF!important;
+}
+.horario-aula{
 	font-weight:bold;
 }
-.bloc-style{
-	width:100%;
-	margin-bottom:20px;
-	padding-bottom:15px;
-	border-style:solid;
-	border-color:#B6B6B6!important;
-	background:linear-gradient(0deg, #DDDDDD 0%, #FFFFFF 100%);
-	box-shadow:0px 2px 7px #BFBFBF;
-	padding-left:15px;
-	border-width:0px 0px 1px 0px;
+.descricao-horario{
+	font-weight:lighter;
 }
-.img-style{
-	width:125px;
-	margin-left:50px;
+.icon-horario{
+	text-shadow:0px 0px 1px #FFFFFF;
+	font-weight:bold;
 }
-.coloe-al{
-	background-color:#000000;
+.horarios:hover{
+	box-shadow:0px 2px 11px #FFFFFF;
+	background:linear-gradient(0deg, #33393D 0%, #464748 100%);
 }
-.temp-ali{
-	margin-left:10px;
+.descricao-prof{
+	font-size:14px;
 }
-.h3-style{
-	width:100%;
-	background-color:transparent;
+.menu-cor{
+	font-size:14px;
+}
+.bloc-divider-t-pratica-fill{
+	fill:#4F4F4F;
+}
+.bloc-divider-t-professor-fill{
+	fill:#79A9EC;
+}
+.corlo{
+	color:#FFFFFF!important;
+}
+.h3-pe-style{
+	font-family:Montserrat;
 	color:#000000!important;
+}
+.hero::before{
+	position:absolute;
+	content:"";
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	background:linear-gradient(0deg, rgba(0,0,0,0.42) 0%, rgba(191,24,0,0.27) 10%, rgba(144,124,183,0.18) 34%, rgba(192,0,169,0.34) 65%, rgba(222,222,222,0.31) 100%);
+}
+.fundo-contato::before{
+	filter:blur(0px);
+	content:"";
+	position:absolute;
+}
+.contrate-{
+	position:fixed;
+	background-color:#FF0008;
+	float:none;
+	bottom:0px;
+	right:0px;
+	left:0px;
+	display:inline;
+	z-index:999999;
+	color:#FFFFFF!important;
 	font-weight:bold;
+}
+.contrate-:hover{
+	position:fixed;
+}
+.saiba-mais{
+	background:linear-gradient(133deg, #249BCC 1%, #FF6EF6 100%);
+	box-shadow:0px 2px 9px #5A5A5A;
+	color:#E5E5E5!important;
+	font-weight:bold;
+}
+.saiba-mais:hover{
+	box-shadow:inset 0px 2px 2px #000000;
+	background:linear-gradient(0deg, #0A3D66 0%, #4B1B56 98%);
+	text-shadow:0px 1px 5px #FFFFFF;
 }
 
 /* = Colour
 -------------------------------------------------------------- */
 
+/* Background colour styles */
+
+.bgc-lavender-floral{
+	background-color:#BF78E9;
+}
+.bgc-maya-blue{
+	background-color:#7AAAED;
+}
+.bgc-maya-blue-2{
+	background-color:#7AAAEC;
+}
+.bgc-light-gray{
+	background-color:#D6D8D8;
+}
+.bgc-lavender-floral-2{
+	background-color:#C078E9;
+}
+
+/* Text colour styles */
+
+.tc-white{
+	color:#FFFFFF!important;
+}
+.tc-outer-space{
+	color:#444444!important;
+}
+.tc-light-gray{
+	color:#D6D8D8!important;
+}
 
 /* Link colour styles */
 
-.ltc-lavender-indigo{
-	color:#A35AFF!important;
+.ltc-lavender-floral{
+	color:#C078E9!important;
 }
-.ltc-lavender-indigo:hover{
-	color:#8248cc!important;
+.ltc-lavender-floral:hover{
+	color:#9a60ba!important;
 }
 
+/* Icon colour styles */
 
+.icon-razzle-dazzle-rose{
+	color:#EF39CE!important;
+	border-color:#EF39CE!important;
+}
+
+/* Bloc image backgrounds */
+
+.bg-home-topo{
+	background-image:url("img/home-topo.jpg");
+}
+.bg-galeria-06-fundo{
+	background-image:url("img/galeria-06-fundo.jpg");
+}
+
+/* = Custom Bric Data
+-------------------------------------------------------------- */
+
+.img-text-overlay-container{
+	position:relative;
+}
+.text-label-overlay{
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width:100%;
+	 text-align:center;
+	font-size:40px;
+}
+.text-overlay-light-text{
+	color:rgba(255,255,255,.5);
+}
 
 
 /* = Bloc Padding Multi Breakpoint
@@ -516,35 +887,45 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	   height: 320px;
     }
 }
+@media (max-width: 767px){
+	.text-right{
+	}
+	.text-left{
+	}
+	.text-center{
+	}
+	
+}
+
 @media (max-width: 575px){
-	.h1-style{
-		font-size:28px;
+	.menu{
+		right:10px;
+		position:fixed;
 	}
-	.h2-style{
-		font-size:17px;
-	}
-	.p-style{
-		opacity:0.4;
-		font-size:14px;
-		font-weight:900;
-		color:#00000C!important;
-		text-align:left;
-		font-family:"Lato";
-	}
-	.p-bloc-1-style{
-		width:100%;
-		color:rgba(0,0,0,0.79)!important;
-		font-size:15px;
-	}
-	.btn-style{
-		width:100%;
-		font-size:14px;
-	}
-	.btn-style:hover{
-		background-color:#9D21A0;
+	.fundo-menu-mobile{
+		background:linear-gradient(0deg, #FFFFFF 0%, #FFFFFF  100%);
+		padding:10px 10px 10px 10px;
 	}
 	.img-style{
-		width:77px;
+		width:131px;
+		padding-top:100px;
+	}
+	.title-coluna{
+		font-size:30px;
+	}
+	.cor{
+		font-size:16px;
+	}
+	.horario-aula{
+		text-align:center;
+	}
+	.icon-horario{
+		background-color:transparent;
+		color:#FFFFFF!important;
+	}
+	.tenha{
+		font-size:20px;
+		text-align:center;
 	}
 	
 }
